@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Images processing</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="content">
+        <div id="thumbsWrapper">
+            <ul id="thumbs"></ul>
+        </div>
+        <div id="customFileInput">
+            <h5 id="info"><b>&larr;</b> move thumbnails with your keyboard arrows <b>&rarr;</b></h5>
+            <input type="file" id="fileInput" name="files[]" title="go on;&gt;" multiple accept="image/jpeg, image/png" />
+            <div>Click or drop pictures here</div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        window.app = {
+            collections: {},
+            models: {},
+            views: {
+                mixins: {}
+            },
+            utils: {}
+        };
+    </script>
+    <script type="text/javascript" src="js/utils/helpers.js"></script>
+    <script type="text/javascript" src="js/utils/eventAggregator.js"></script>
+    <script type="text/javascript" src="js/utils/canvas.js"></script>
+    <script type="text/javascript" src="js/models/pictureModel.js"></script>
+    <script type="text/javascript" src="js/views/pictureView.js"></script>
+    <script type="text/javascript" src="js/collections/picturesCollection.js"></script>
+    <script type="text/javascript" src="js/views/mixins/keyboardListener.js"></script>
+    <script type="text/javascript" src="js/views/mixins/bufferedView.js"></script>
+    <script type="text/javascript" src="js/views/mixins/horizontalListView.js"></script>
+    <script type="text/javascript" src="js/views/thumbsView.js"></script>
+    <script type="text/javascript" src="js/collections/filesCollection.js"></script>
+    <script type="text/javascript" src="js/views/filesView.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

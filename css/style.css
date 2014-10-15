@@ -1,0 +1,133 @@
+@import url(normalize.css);
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #ccc;
+}
+
+.content {
+    width: 800px;
+    margin: 20px auto;
+}
+
+#thumbsWrapper {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+#thumbs {
+    width: 0;
+    height: 150px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    left: 0px;
+    -webkit-transition: left 0.6s;
+    -moz-transition: left 0.6s;
+    transition: left 0.6s;
+}
+
+#thumbs li {
+    float: left;
+    margin-right: 5px;
+}
+
+#thumbs li img {
+    cursor: pointer;
+}
+
+#thumbs li:last-child {
+    margin-right: 0;
+}
+
+#customFileInput {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    margin-top: 20px;
+}
+
+#customFileInput div {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 135px 100px;
+    text-align: center;
+    border: 3px dashed #ccc;
+    border-radius: 10px;
+    font-size: 22px;
+    z-index: 1;
+    -webkit-transition: color 1.1s, border-color 1.1s, background-color 1.6s;
+    -moz-transition: color 1.1s, border-color 1.1s, background-color 1.6s;
+    transition: color 1.1s, border-color 1.1s, background-color 1.6s;
+    background-color: #ffffff;
+}
+
+#customFileInput h5 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    z-index: 2;
+    font-size: 14px;
+    color: #71A8C3;
+    opacity: 0;
+}
+
+#customFileInput h5 {
+    -webkit-transition: opacity 1.1s;
+    -moz-transition: opacity 1.1s;
+    transition: opacity 1.1s;
+}
+
+#customFileInput h5.keyboard {
+    opacity: 1 !important;
+}
+
+#customFileInput h5 b {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0 8px;
+    position: relative;
+    top: 3px;
+}
+
+
+.filesSelected {
+    background-color: #eee !important;
+}
+
+.filesSelected, #fileInput.hover + div {
+    transition: color 0.2s, border-color 0.2s, background-color 0.4s !important;
+    -webkit-transition: color 0.2s, border-color 0.2s, background-color 0.4s !important;
+    -moz-transition: color 0.2s, border-color 0.2s, background-color 0.4s !important;
+}
+
+
+
+#fileInput.hover + div {
+    border-color: #71A8C3;
+    color: #71A8C3;
+}
+
+#fileInput {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 3;
+}
+
+#fileInput::-webkit-file-upload-button {
+    cursor: pointer;
+}
